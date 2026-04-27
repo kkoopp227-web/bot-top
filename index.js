@@ -750,7 +750,7 @@ client.on('messageCreate', async message => {
                     points += pendingPoints;
                 }
 
-                const level = Math.floor(points / 1000);
+                const level = Math.floor(points / 500);
                 leaderboard.push({ userId, points, level });
             }
         }
@@ -765,8 +765,8 @@ client.on('messageCreate', async message => {
                 const timeInVoice = Date.now() - joinTime;
                 const points = Math.floor(timeInVoice / config.duration) * config.points;
                 if (points > 0) {
-                    const level = Math.floor(points / 1000);
-                    leaderboard.push({ userId, points, level });
+                const level = Math.floor(points / 500);
+                leaderboard.push({ userId, points, level });
                 }
             }
         }
